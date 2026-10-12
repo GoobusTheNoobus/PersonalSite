@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ASCII_ART } from '../global.ts';
+---
+<Layout title="Goobus' Personal Site">
+
+  <section class="hero">
+    <pre class="ascii-art" aria-hidden="true">{ASCII_ART}</pre>
+    <p class="subtitle">Unemployed Larper Larping Code<span class="cursor" aria-hidden="true">_</span></p>
+  </section>
+
+  <style>
+    .hero {
+      min-height: 70vh;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    .ascii-art {
+      margin-bottom: ;
+      font-size: clamp(0.35rem, 1.5vw, 0.75rem);
+      line-height: 1.15;
+      overflow-x: auto;
+      color: var(--accent);
+      text-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    .subtitle::before {
+      content: '> ';
+      
+    }
+
+    .cursor {
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { 
+				opacity: 0; 
+			}
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cursor { animation: none; }
+    }
+
+		@media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-l);
+        min-height: auto;
+      }
+    }
+  </style>
+</Layout>
