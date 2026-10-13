@@ -1,0 +1,48 @@
+---
+import '../styles/global.css'
+import { ASCII_ART } from '../global';
+---
+
+<nav>
+  <a href="/"><pre>{ASCII_ART}</pre></a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="https://github.com/GoobusTheNoobus/PersonalSite" 
+      target="_blank" 
+      rel="noopener noreferrer">Repo↗</a>
+  </div>
+  
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    margin: 3rem 10rem 2rem 10rem;
+    padding: 1rem 4rem;
+    min-height: 4rem;
+    align-items: center;
+
+    background-color: rgba(25, 48, 70, 0.08);
+
+    border-radius: 2rem;
+    border-width: 2px;
+    border-color: rgb(51, 49, 56);
+    border-style: solid;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+    margin-left: auto;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  a pre {
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+  }
+</style>
