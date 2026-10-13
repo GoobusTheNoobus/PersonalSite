@@ -4,30 +4,37 @@ import { ASCII_ART } from '../global.ts';
 ---
 <Layout title="Goobus' Personal Site">
 
-  <section class="hero">
+  <div class="hero">
     <pre class="ascii-art" aria-hidden="true">{ASCII_ART}</pre>
     <p class="subtitle">Unemployed Larper Larping Code<span class="cursor" aria-hidden="true">_</span></p>
-  </section>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h1>Who is bro?</h1>
+      <p>I'm David, and I code random stuff. I spend most of my free time playing chess, drawing, 
+        and working on coding projects, like this one.
+      </p>
+    </div>
+  </div>
+  
 
   <style>
     .hero {
-      min-height: 70vh;
       width: fit-content;
       max-width: 100%;
-      margin: 0 auto;
+      margin: 3rem auto 2rem auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       font-family: 'JetBrains Mono', ui-monospace, monospace;
+      user-select: none;
     }
 
     .ascii-art {
-      margin-bottom: ;
       font-size: clamp(0.35rem, 1.5vw, 0.75rem);
       line-height: 1.15;
       overflow-x: auto;
       color: var(--accent);
-      text-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
     }
 
     .subtitle {
@@ -39,7 +46,6 @@ import { ASCII_ART } from '../global.ts';
 
     .subtitle::before {
       content: '> ';
-      
     }
 
     .cursor {
@@ -62,6 +68,25 @@ import { ASCII_ART } from '../global.ts';
         gap: var(--space-l);
         min-height: auto;
       }
+    }
+
+    .cards {
+      display: flex;
+      max-width: 60rem;
+      padding: 3rem;
+
+      margin: 0 auto;
+
+      background-color: rgba(25, 48, 70, 0.08);
+
+      border-radius: 2rem;
+      border-width: 2px;
+      border-color: rgb(51, 49, 56);
+      border-style: solid;
+    }
+
+    .card {
+      max-width: 50%;
     }
   </style>
 </Layout>
