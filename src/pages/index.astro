@@ -11,9 +11,17 @@ import { ASCII_ART } from '../global.ts';
 
   <div class="cards">
     <div class="card">
-      <h1>Who is bro?</h1>
+      <h2>Who is bro?</h2>
       <p>I'm David, and I code random stuff. I spend most of my free time playing chess, drawing, 
-        and working on coding projects, like this one.
+        and working on coding projects, like this one. As an amature programmer, I have a few projects,
+        include a chess engine, which I discontinued due to how unmaintainable it is, and started a 
+        new repository (I will find time to work on it in the future). The main project I am working
+        on right now is an interpreter for a custom programming language.
+      </p>
+    </div>
+    <div class="card">
+      <h2>WIP</h2>
+      <p>Not quite sure what I will put here, but I'm sure I have some stuff to say.
       </p>
     </div>
   </div>
@@ -72,8 +80,8 @@ import { ASCII_ART } from '../global.ts';
 
     .cards {
       display: flex;
-      max-width: 60rem;
-      padding: 3rem;
+      max-width: 80rem;
+      padding: 1rem;
 
       margin: 0 auto;
 
@@ -87,6 +95,15 @@ import { ASCII_ART } from '../global.ts';
 
     .card {
       max-width: 50%;
+      padding: 2rem;
+      margin: 0.5rem;
+
+      background-color: rgba(25, 48, 70, 0.08);
+
+      border-radius: 2rem;
+      border-width: 2px;
+      border-color: rgb(51, 49, 56);
+      border-style: solid;
     }
   </style>
 </Layout>
