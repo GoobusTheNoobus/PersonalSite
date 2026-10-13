@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro'
 import { ASCII_ART } from '../global.ts';
 ---
 
@@ -22,8 +21,18 @@ import { ASCII_ART } from '../global.ts';
       </p>
     </div>
     <div class="card">
-      <h2>WIP</h2>
-      <p>Not quite sure what I will put here, but I'm sure I have some stuff to say.
+      <h2>My Languages</h2>
+      <p>I mainly code in C++, but I am trying to get into the Web Development world, hence why I 
+        built this site (built with <a
+             href="https://astro.build/"
+             target="_blank" 
+             rel="noopener noreferrer">Astro</a>
+        ). My other languages are C#, Java, Python, Lua, TOML (if it counts at all), though I am not 
+        as fluent in them. 
+
+        <br>
+        <br>
+        This project tooks approximately 2 hours to build
       </p>
     </div>
   </div>
@@ -68,24 +77,12 @@ import { ASCII_ART } from '../global.ts';
 			}
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .cursor { animation: none; }
-    }
-
-		@media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: var(--space-l);
-        min-height: auto;
-      }
-    }
-
     .cards {
       display: flex;
       max-width: 80rem;
       padding: 1rem;
 
-      margin: 0 auto;
+      margin: 0 auto 3rem;
 
       background-color: rgba(25, 48, 70, 0.08);
 

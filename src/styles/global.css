@@ -14,7 +14,7 @@ html {
   margin: 0;
   background: radial-gradient(circle at 73% 30%, rgba(171, 131, 109, 0.3), transparent 45%),
               radial-gradient(circle at 34% 80%, rgba(149, 207, 160, 0.25), transparent 45%), 
-              #120318;
+              #120318 no-repeat center center fixed;
   min-height: 100vh;
   color: #f5ece9;
   font-family: 'JetBrains Mono', system-ui, sans-serif;
@@ -23,7 +23,7 @@ html {
 }
 
 a { 
-  color: var(--accent); 
+  color: #f5ece9; 
 }
 
 h1, h2, h3 { 
