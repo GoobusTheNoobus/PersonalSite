@@ -33,29 +33,29 @@ import { ASCII_ART } from '../global.ts';
     .hero {
       width: fit-content;
       max-width: 100%;
-      margin: 3rem auto 2rem auto;
+      margin: 2rem auto 2rem auto;
       display: flex;
       flex-direction: column;
       font-family: 'JetBrains Mono', ui-monospace, monospace;
       user-select: none;
+      color: rgb(191, 218, 210);
     }
 
     .ascii-art {
-      font-size: clamp(0.35rem, 1.5vw, 0.75rem);
+      font-size: clamp(0.35rem, 1.5vw, 1rem);
       line-height: 1.15;
       overflow-x: auto;
-      color: var(--accent);
     }
 
     .subtitle {
       margin: 0;
       font-size: clamp(0.8rem, 2vw, 1rem);
       letter-spacing: 0.08em;
-      color: var(--muted);
+      color: ;
     }
 
     .subtitle::before {
-      content: '> ';
+      content: '$ ';
     }
 
     .cursor {

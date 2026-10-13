@@ -16,7 +16,7 @@ html {
               radial-gradient(circle at 34% 80%, rgba(149, 207, 160, 0.25), transparent 45%), 
               #120318;
   min-height: 100vh;
-  color: #efe7e4;
+  color: #f5ece9;
   font-family: 'JetBrains Mono', system-ui, sans-serif;
   font-size: clamp(0.8rem, 1vw, 1rem);
   line-height: 1.6;
