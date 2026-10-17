@@ -1,10 +1,11 @@
 ---
 import '../styles/global.css'
 import { ASCII_ART } from '../global';
+const base = import.meta.env.BASE_URL;
 ---
 
 <nav>
-  <a href="/"><pre>{ASCII_ART}</pre></a>
+  <a href={base}><pre>{ASCII_ART}</pre></a>
   <div class="nav-links">
     <a href="https://github.com/GoobusTheNoobus/PersonalSite" 
       target="_blank" 
