@@ -34,6 +34,11 @@ html {
 
 a {
   color: #f5ece9;
+  transition: 300ms ease;
+}
+
+a:hover {
+  color: #cabdc1;
 }
 
 h1,
