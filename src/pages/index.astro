@@ -4,46 +4,83 @@ import { ASCII_ART } from '../global.ts';
 ---
 
 <Layout title="Goobus' Personal Site">
-
   <div class="hero">
     <pre class="ascii-art" aria-hidden="true">{ASCII_ART}</pre>
-    <p class="subtitle">Unemployed Larper Larping Code<span class="cursor" aria-hidden="true">_</span></p>
+    <p class="subtitle">
+      Unemployed Larper Larping Code
+      <span class="cursor" aria-hidden="true">
+        _
+      </span>
+    </p>
   </div>
 
   <div class="cards">
-    <div class="card">
-      <h2>Who is bro?</h2>
-      <p>I'm David, and I code random stuff. I spend most of my free time playing chess, drawing, 
-        and working on coding projects, like this one. As an amateur programmer, I have a few projects,
-        including a chess engine, which I discontinued due to how unmaintainable it is, and started a 
-        new repository (I will find time to work on it in the future). The main project I am working
-        on right now is an interpreter for a custom programming language.
+    <div class="card" id="hello-card">
+      <h2>Hello! :D</h2>
+      <p>
+        I'm David, and I am a 14 y.o. hobbyist programmer who likes building
+        random stuff. Most of my free time goes toward playing chess, drawing,
+        and working on coding projects (like this one!).
       </p>
     </div>
-    <div class="card">
-      <h2>My Languages</h2>
-      <p>I mainly code in C++, but I am trying to get into the Web Development world, hence why I 
-        built this site (built with <a
-             href="https://astro.build/"
-             target="_blank" 
-             rel="noopener noreferrer">Astro</a>
-        ). My other languages are C#, Java, Python, Lua, TOML (if it counts at all), though I am not 
-        as fluent in them. 
 
-        <br>
-        <br>
-        This was built in approximately two hours, mostly during class. This isn't meant to be high 
-        quality or polished, just something made for fun.
-      </p>
+    <div class="card" id="about-card">
+      <h2>About me</h2>
+
+      <ul>
+        <li>Pronouns: He/Him</li>
+        <li>I prefer understanding my code over blindly copying solutions</li>
+        <li>
+          I am against the use of LLM generated code in my projects, as I
+          accomplish nothing that way
+        </li>
+        <li>
+          <strong>Philippians 4:13</strong>
+          <i>"I can do all things through him who strengthens me."</i>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card" id="technologies">
+      <h2>Technologies</h2>
+      <i>
+        I'm still learning, these technologies are just the ones I have at least
+        a bit of experience with.
+      </i>
+    </div>
+
+    <div class="card" id="languages-card">
+      <h2>Languages</h2>
+
+      <ul>
+        <li>C++</li>
+        <li>Python</li>
+        <li>HTML/CSS/TypeScript</li>
+        <li>Java</li>
+        <li>C#</li>
+      </ul>
+    </div>
+
+    <div class="card" id="tools-card">
+      <h2>Tools</h2>
+
+      <ul>
+        <li>Git/Github</li>
+        <li>Linux</li>
+        <li>Visual Studio Code</li>
+        <li>CLion</li>
+        <li>PyCharm</li>
+        <li>Vite</li>
+        <li>Astro</li>
+      </ul>
     </div>
   </div>
-  
 
   <style>
     .hero {
       width: fit-content;
       max-width: 100%;
-      margin: 2rem auto 2rem auto;
+      margin: 2rem auto 5rem;
       display: flex;
       flex-direction: column;
       font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -59,7 +96,7 @@ import { ASCII_ART } from '../global.ts';
 
     .subtitle {
       margin: 0;
-      font-size: clamp(0.8rem, 2vw, 1rem);
+      font-size: clamp(0.8rem, 1.2vw, 1.25rem);
       letter-spacing: 0.08em;
     }
 
@@ -72,14 +109,15 @@ import { ASCII_ART } from '../global.ts';
     }
 
     @keyframes blink {
-      50% { 
-				opacity: 0; 
-			}
+      50% {
+        opacity: 0;
+      }
     }
 
     .cards {
       display: flex;
-      max-width: 80rem;
+      flex-wrap: wrap;
+      width: 70vw;
       padding: 1rem;
 
       margin: 0 auto 3rem;
@@ -93,16 +131,36 @@ import { ASCII_ART } from '../global.ts';
     }
 
     .card {
-      max-width: 50%;
-      padding: 2rem;
-      margin: 0.5rem;
-
+      padding: 1rem 2rem 1rem;
       background-color: rgba(25, 48, 70, 0.08);
 
       border-radius: 2rem;
       border-width: 2px;
       border-color: rgb(51, 49, 56);
       border-style: solid;
+
+      margin: 0.5rem auto 0.5rem;
+    }
+
+    #about-card {
+      width: 36%;
+    }
+
+    #hello-card {
+      width: 50%;
+    }
+
+    #technologies {
+      width: 93%;
+      text-align: center;
+    }
+
+    #languages-card {
+      width: 42%;
+    }
+
+    #tools-card {
+      width: 44%;
     }
   </style>
 </Layout>

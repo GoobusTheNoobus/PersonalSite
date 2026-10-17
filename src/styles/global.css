@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('fonts/JetBrainsMonoNL-Regular.ttf');
+  src: url('/PersonalSite/fonts/JetBrainsMonoNL-Regular.ttf');
 }
 
 :root {
@@ -12,9 +12,19 @@
 
 html {
   margin: 0;
-  background: radial-gradient(circle at 73% 30%, rgba(171, 131, 109, 0.3), transparent 45%),
-              radial-gradient(circle at 34% 80%, rgba(149, 207, 160, 0.25), transparent 45%), 
-              #120318 no-repeat center center fixed;
+  background:
+    radial-gradient(
+      circle at 73% 30%,
+      rgba(171, 131, 109, 0.3),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 34% 80%,
+      rgba(149, 207, 160, 0.25),
+      transparent 45%
+    ),
+    #120318 no-repeat center center fixed;
+  background-attachment: fixed;
   min-height: 100vh;
   color: #f5ece9;
   font-family: 'JetBrains Mono', system-ui, sans-serif;
@@ -22,10 +32,12 @@ html {
   line-height: 1.6;
 }
 
-a { 
-  color: #f5ece9; 
+a {
+  color: #f5ece9;
 }
 
-h1, h2, h3 { 
-  line-height: 1.2; 
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
