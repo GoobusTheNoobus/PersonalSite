@@ -1,0 +1,183 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Projects | Goobus' Personal Site">
+  <p class="terminal-prompt">
+    ls ~/projects
+    <span class="cursor" aria-hidden="true">
+      _
+    </span>
+  </p>
+
+  <header class="page-header">
+    <h1>My Projects</h1>
+    <p class="description">
+      <i>
+        A collection of things I've built, things I'm building, and things I
+        regret making. Most of these aren't serious projects and are just me
+        messing around.
+      </i>
+    </p>
+  </header>
+
+  <section class="projects" aria-label="Projects">
+    <div class="card">
+      <div class="project-heading">
+        <h2>Aura</h2>
+        <span class="status">WIP</span>
+      </div>
+      <p class="tech">[C++]</p>
+      <p>
+        A toy interpreter for a custom programming language, exploring lexing,
+        parsing, and expression evaluation.
+      </p>
+      <a
+        href="https://github.com/GoobusTheNoobus/Aura"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View repository ↗
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="project-heading">
+        <h2>LarpOS</h2>
+        <span class="status">WIP</span>
+      </div>
+      <p class="tech">[TypeScript, HTML, CSS]</p>
+      <p>
+        A browser-based desktop simulator with a desktop, taskbar, start menu,
+        and application windows.
+      </p>
+      <a
+        href="https://github.com/GoobusTheNoobus/LarpOS"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View repository ↗
+      </a>
+    </div>
+
+    <div class="card">
+      <div class="project-heading">
+        <h2>Personal Site</h2>
+        <span class="status">Live</span>
+      </div>
+      <p class="tech">[Astro, HTML, CSS]</p>
+      <p>
+        My personal website, built to learn web development and showcase my
+        projects.
+      </p>
+      <a
+        href="https://github.com/GoobusTheNoobus/PersonalSite"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View repository ↗
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    margin: 0rem auto 2.5rem;
+    max-width: 70vw;
+  }
+
+  .page-header h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  .description {
+    max-width: 42rem;
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    width: 75vw;
+    margin: 4rem auto 0rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+    border: 2px solid rgb(51, 49, 56);
+    border-radius: 2rem;
+    background-color: rgba(25, 48, 70, 0.08);
+    transition: 150ms ease;
+  }
+
+  .card:hover {
+    border-color: var(--color-bright);
+    background-color: rgba(25, 48, 70, 0.2);
+  }
+
+  .project-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .project-heading h2 {
+    margin: 0;
+  }
+
+  .status {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid rgb(51, 49, 56);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+
+  .tech {
+    margin: 0.75rem 0;
+    color: var(--color-bright);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.85rem;
+  }
+
+  .project-card > p:not(.tech) {
+    margin: 0 0 1.5rem;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+
+  .project-card a {
+    margin-top: auto;
+    text-decoration: none;
+  }
+
+  .project-card a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+  }
+
+  @media (max-width: 700px) {
+    .project-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-card {
+      padding: 1.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card {
+      transition: none;
+    }
+  }
+</style>

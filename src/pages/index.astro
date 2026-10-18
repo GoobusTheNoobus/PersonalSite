@@ -4,77 +4,79 @@ import { ASCII_ART } from '../global.ts';
 ---
 
 <Layout title="Goobus' Personal Site">
-  <div class="hero">
-    <pre class="ascii-art" aria-hidden="true">{ASCII_ART}</pre>
-    <p class="subtitle">
-      Unemployed Larper Larping Code
-      <span class="cursor" aria-hidden="true">
-        _
-      </span>
-    </p>
-  </div>
-
-  <div class="cards">
-    <div class="card" id="hello-card">
-      <h2>Hello! :D</h2>
-      <p>
-        I'm David, and I am a 14 y.o. hobbyist programmer who likes building
-        random stuff. Most of my free time goes toward playing chess, drawing,
-        and working on coding projects (like this one!).
+  <main>
+    <div class="hero">
+      <pre class="ascii-art" aria-hidden="true">{ASCII_ART}</pre>
+      <p class="subtitle">
+        Unemployed Larper Larping Code
+        <span class="cursor" aria-hidden="true">
+          _
+        </span>
       </p>
     </div>
 
-    <div class="card" id="about-card">
-      <h2>About me</h2>
+    <div class="cards">
+      <div class="card" id="hello-card">
+        <h2>Hello! :D</h2>
+        <p>
+          I'm David, and I am a hobbyist programmer who likes building random
+          stuff. Most of my free time goes toward playing chess, drawing, and
+          working on coding projects (like this one!).
+        </p>
+      </div>
 
-      <ul>
-        <li>Pronouns: He/Him</li>
-        <li>I prefer understanding my code over blindly copying solutions</li>
-        <li>
-          I am against the use of LLM generated code in my projects, as I
-          accomplish nothing that way
-        </li>
-        <li>
-          <strong>Philippians 4:13</strong>
-          <i>"I can do all things through him who strengthens me."</i>
-        </li>
-      </ul>
+      <div class="card" id="about-card">
+        <h2>About me</h2>
+
+        <ul>
+          <li>Pronouns: He/Him</li>
+          <li>I prefer understanding my code over blindly copying solutions</li>
+          <li>
+            I am against the use of LLM generated code in my projects, as I
+            accomplish nothing that way
+          </li>
+          <li>
+            <strong>Philippians 4:13</strong>
+            <i>"I can do all things through him who strengthens me."</i>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card" id="technologies">
+        <h2>Technologies</h2>
+        <i>
+          I'm still learning, these technologies are just the ones I have at
+          least a bit of experience with.
+        </i>
+      </div>
+
+      <div class="card" id="languages-card">
+        <h2>Languages</h2>
+
+        <ul>
+          <li>C++</li>
+          <li>Python</li>
+          <li>HTML/CSS/TypeScript</li>
+          <li>Java</li>
+          <li>C#</li>
+        </ul>
+      </div>
+
+      <div class="card" id="tools-card">
+        <h2>Tools</h2>
+
+        <ul>
+          <li>Git/Github</li>
+          <li>Linux</li>
+          <li>Visual Studio Code</li>
+          <li>CLion</li>
+          <li>PyCharm</li>
+          <li>Vite</li>
+          <li>Astro</li>
+        </ul>
+      </div>
     </div>
-
-    <div class="card" id="technologies">
-      <h2>Technologies</h2>
-      <i>
-        I'm still learning, these technologies are just the ones I have at least
-        a bit of experience with.
-      </i>
-    </div>
-
-    <div class="card" id="languages-card">
-      <h2>Languages</h2>
-
-      <ul>
-        <li>C++</li>
-        <li>Python</li>
-        <li>HTML/CSS/TypeScript</li>
-        <li>Java</li>
-        <li>C#</li>
-      </ul>
-    </div>
-
-    <div class="card" id="tools-card">
-      <h2>Tools</h2>
-
-      <ul>
-        <li>Git/Github</li>
-        <li>Linux</li>
-        <li>Visual Studio Code</li>
-        <li>CLion</li>
-        <li>PyCharm</li>
-        <li>Vite</li>
-        <li>Astro</li>
-      </ul>
-    </div>
-  </div>
+  </main>
 
   <style>
     .hero {
@@ -104,16 +106,6 @@ import { ASCII_ART } from '../global.ts';
       content: '$ ';
     }
 
-    .cursor {
-      animation: blink 1s steps(1) infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -140,6 +132,13 @@ import { ASCII_ART } from '../global.ts';
       border-style: solid;
 
       margin: 0.5rem auto 0.5rem;
+
+      transition: 150ms ease;
+    }
+
+    .card:hover {
+      border-color: var(--color-bright);
+      background-color: rgba(25, 48, 70, 0.2);
     }
 
     #about-card {

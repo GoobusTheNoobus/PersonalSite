@@ -8,6 +8,10 @@
   --space-m: 1rem;
   --space-l: 2rem;
   --space-xl: 4rem;
+
+  --color-normal: #f5ece9;
+  --color-accent: #cabdc1;
+  --color-bright: #75d9d0;
 }
 
 html {
@@ -33,16 +37,38 @@ html {
 }
 
 a {
-  color: #f5ece9;
+  color: var(--color-normal);
   transition: 300ms ease;
 }
 
 a:hover {
-  color: #cabdc1;
+  color: var(--color-accent);
 }
 
 h1,
 h2,
 h3 {
   line-height: 1.2;
+}
+
+.terminal-prompt {
+  margin: 3rem 0rem 0.75rem 13vw;
+  color: var(--color-bright);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: clamp(0.8rem, 1.2vw, 1.25rem);
+  letter-spacing: 0.08em;
+}
+
+.terminal-prompt::before {
+  content: '$ ';
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }

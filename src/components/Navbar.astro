@@ -9,12 +9,14 @@ const base = import.meta.env.BASE_URL;
     <pre>{ASCII_ART}</pre>
   </a>
   <div class="nav-links">
+    <a href={base}>Home</a>
+    <a href={base + '/projects'}>Projects</a>
     <a
       href="https://github.com/GoobusTheNoobus/PersonalSite"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Repo↗
+      Repo ↗
     </a>
   </div>
 </nav>
@@ -22,7 +24,7 @@ const base = import.meta.env.BASE_URL;
 <style>
   nav {
     display: flex;
-    margin: 3rem 10rem 1rem 10rem;
+    margin: 3rem 10rem 1rem;
     padding: 1rem 4rem;
     min-height: 4rem;
     align-items: center;
@@ -42,8 +44,6 @@ const base = import.meta.env.BASE_URL;
   }
 
   a {
-    text-decoration: none;
-    font-size: 1.2rem;
   }
 
   a pre {

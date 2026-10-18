@@ -1,25 +1,95 @@
 ---
 ---
 
-<div class="footer">
-  Version 1.0.0 <br />
-  <u>This site is free of any LLM-generated code.</u>
-  <br />
-  <br />
-  Copyright (C) 2026{' '}
-  <a
-    href="https://github.com/GoobusTheNoobus"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    David Huang↗
-  </a>{' '}
-  <br />
-  All rights reserved.
-</div>
+<footer class="footer">
+  <div class="footer-top">
+    <span id="version">
+      PERSONAL SITE <span class="muted">/</span> v1.1.0
+    </span>
+    <span class="motto">
+      All code in this website is human-written. When it breaks, don't blame the
+      big GPT
+    </span>
+  </div>
+
+  <div class="footer-bottom">
+    <span>
+      Copyright © 2026{' '}
+      <a
+        href="https://github.com/GoobusTheNoobus"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        David Huang ↗
+      </a>
+    </span>
+
+    <span class="muted">All rights reserved.</span>
+  </div>
+</footer>
 
 <style>
   .footer {
-    margin: 6rem 2rem 3rem;
+    margin: 6rem 5rem 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgb(51, 49, 56);
+    color: #b5bec9;
+    font-size: 0.85rem;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-top {
+    margin-bottom: 1.5rem;
+  }
+
+  #version {
+    color: #75d9d0;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .motto {
+    color: #75d9d0;
+    opacity: 0.8;
+  }
+
+  .muted {
+    color: #727e8d;
+  }
+
+  .footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer a:hover {
+    color: #75d9d0;
+  }
+
+  @media (max-width: 700px) {
+    .footer {
+      margin: 4rem 1.25rem 1.5rem;
+    }
+
+    .footer-top,
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer a {
+      transition: none;
+    }
   }
 </style>
