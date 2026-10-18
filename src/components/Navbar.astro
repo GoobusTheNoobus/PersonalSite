@@ -5,7 +5,7 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <nav>
-  <a href={base}>
+  <a class='ascii-art' href={base}>
     <pre>{ASCII_ART}</pre>
   </a>
   <div class="nav-links">
@@ -43,10 +43,7 @@ const base = import.meta.env.BASE_URL;
     margin-left: auto;
   }
 
-  a {
-  }
-
-  a pre {
+  .ascii-art {
     font-size: 0.3rem;
     line-height: 0.3rem;
     text-decoration: none;
