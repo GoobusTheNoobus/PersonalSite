@@ -11,7 +11,7 @@
 
   --color-normal: #f5ece9;
   --color-accent: #cabdc1;
-  --color-bright: #75d9d0;
+  --color-bright: #62d8ce;
 }
 
 html {
@@ -19,15 +19,15 @@ html {
   background:
     radial-gradient(
       circle at 73% 30%,
-      rgba(171, 131, 109, 0.3),
+      rgba(198, 137, 104, 0.3),
       transparent 45%
     ),
     radial-gradient(
       circle at 34% 80%,
-      rgba(149, 207, 160, 0.25),
+      rgba(110, 203, 127, 0.25),
       transparent 45%
     ),
-    #120318 no-repeat center center fixed;
+    #20012d no-repeat center center fixed;
   background-attachment: fixed;
   min-height: 100vh;
   color: #f5ece9;
