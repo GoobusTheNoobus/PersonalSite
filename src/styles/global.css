@@ -28,7 +28,7 @@ html {
       rgba(110, 203, 127, 0.25),
       transparent 45%
     ),
-    #13011b no-repeat center center fixed;
+    #1d0228 no-repeat center center fixed;
   background-attachment: fixed;
   min-height: 100vh;
   color: var(--color-normal);
@@ -72,4 +72,21 @@ h3 {
   50% {
     opacity: 0;
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background:var(--color-bright);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-less-bright);
 }
