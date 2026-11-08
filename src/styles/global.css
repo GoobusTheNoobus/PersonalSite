@@ -9,9 +9,10 @@
   --space-l: 2rem;
   --space-xl: 4rem;
 
-  --color-normal: #f5ece9;
+  --color-normal: #d8cfcc;
   --color-accent: #cabdc1;
   --color-bright: #62d8ce;
+  --color-less-bright: #4daaa2;
 }
 
 html {
@@ -30,7 +31,7 @@ html {
     #13011b no-repeat center center fixed;
   background-attachment: fixed;
   min-height: 100vh;
-  color: #f5ece9;
+  color: var(--color-normal);
   font-family: 'JetBrains Mono', system-ui, sans-serif;
   font-size: clamp(0.8rem, 1vw, 1rem);
   line-height: 1.6;
